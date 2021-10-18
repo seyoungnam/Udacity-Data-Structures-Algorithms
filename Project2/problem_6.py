@@ -101,8 +101,8 @@ if __name__ == "__main__":
     linked_list_3 = LinkedList()
     linked_list_4 = LinkedList()
 
-    element_1 = [3,2,4,35,6,65,6,4,3,23]
-    element_2 = [1,7,8,9,11,21,1]
+    element_1 = []
+    element_2 = []
 
     for i in element_1:
         linked_list_3.append(i)
@@ -110,7 +110,7 @@ if __name__ == "__main__":
     for i in element_2:
         linked_list_4.append(i)
 
-    print (union(linked_list_3,linked_list_4))                  # 65 -> 2 -> 35 -> 3 -> 4 -> 6 -> 1 -> 7 -> 8 -> 9 -> 11 -> 21 -> 23 -> 
+    print (union(linked_list_3,linked_list_4))                  # No union exists.
     print (intersection(linked_list_3,linked_list_4))           # No intersection exists.
 
     # test case 3 - edge case
