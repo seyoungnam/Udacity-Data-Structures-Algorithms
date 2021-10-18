@@ -6,8 +6,8 @@
 
 ### Time Complexity
 
-O(users) - All users should be visited at least once to confirm the target name belongs to the given group.
+O(n) - All users should be visited at least once to confirm the target name belongs to the given group.
 
 ### Space Complexity
 
-O(groups) - In the worst case, `group_ls` list can contains all existing groups.
+O(n) - In the worst case, `group_ls` list can contains all existing groups.

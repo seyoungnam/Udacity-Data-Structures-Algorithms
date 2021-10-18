@@ -20,7 +20,7 @@ class Group(object):
         return self.name
 
 
-def is_user_in_group(user, group):
+def is_user_in_group(user='', group=Group("empty_group")):
     """
     Return True if user is in the group, False otherwise.
 
@@ -51,6 +51,14 @@ child.add_group(sub_child)
 parent.add_group(child)
 parent.add_group(parent_friend)
 
-print(is_user_in_group(parent_friend_user, child)) # return False
-print(is_user_in_group(parent_friend_user, parent)) # return True
-print(is_user_in_group(sub_child_user, parent)) # return True
+# test case 1
+print(is_user_in_group(parent_friend_user, child))          # False
+print(is_user_in_group(parent_friend_user, parent))         # True
+print(is_user_in_group(sub_child_user, parent))             # True
+
+# test case 2 - edge case - no user argument is given
+print(is_user_in_group('', child))                          # False
+
+# test case 3 - edge case - Both user and group arguments are not given
+print(is_user_in_group())                                   # False
+

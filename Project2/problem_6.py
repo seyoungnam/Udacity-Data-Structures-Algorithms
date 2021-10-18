@@ -77,6 +77,7 @@ def intersection(llist_1, llist_2):
 
 
 if __name__ == "__main__":
+    # test case 1
     print("Test case 1")
 
     linked_list_1 = LinkedList()
@@ -91,9 +92,10 @@ if __name__ == "__main__":
     for i in element_2:
         linked_list_2.append(i)
 
-    print (union(linked_list_1,linked_list_2)) # 32 -> 65 -> 2 -> 35 -> 3 -> 4 -> 6 -> 1 -> 9 -> 11 -> 21 -> 
-    print (intersection(linked_list_1,linked_list_2)) # 4 -> 21 -> 6 -> 
+    print (union(linked_list_1,linked_list_2))                  # 32 -> 65 -> 2 -> 35 -> 3 -> 4 -> 6 -> 1 -> 9 -> 11 -> 21 -> 
+    print (intersection(linked_list_1,linked_list_2))           # 4 -> 21 -> 6 -> 
 
+    # test case 2 - edge case
     print("Test case 2")
 
     linked_list_3 = LinkedList()
@@ -108,16 +110,17 @@ if __name__ == "__main__":
     for i in element_2:
         linked_list_4.append(i)
 
-    print (union(linked_list_3,linked_list_4)) # 65 -> 2 -> 35 -> 3 -> 4 -> 6 -> 1 -> 7 -> 8 -> 9 -> 11 -> 21 -> 23 -> 
-    print (intersection(linked_list_3,linked_list_4)) # No intersection exists.
+    print (union(linked_list_3,linked_list_4))                  # 65 -> 2 -> 35 -> 3 -> 4 -> 6 -> 1 -> 7 -> 8 -> 9 -> 11 -> 21 -> 23 -> 
+    print (intersection(linked_list_3,linked_list_4))           # No intersection exists.
 
+    # test case 3 - edge case
     print("Test case 3")
 
     linked_list_5 = LinkedList()
     linked_list_6 = LinkedList()
 
     element_1 = []
-    element_2 = []
+    element_2 = [46,2,4,71,6]
 
     for i in element_1:
         linked_list_5.append(i)
@@ -125,5 +128,5 @@ if __name__ == "__main__":
     for i in element_2:
         linked_list_6.append(i)
 
-    print (union(linked_list_5,linked_list_6)) # No union exists.
-    print (intersection(linked_list_5,linked_list_6)) # No intersection exists.
+    print (union(linked_list_5,linked_list_6))                 # 2 -> 4 -> 6 -> 71 -> 46 -> 
+    print (intersection(linked_list_5,linked_list_6))          # No intersection exists.

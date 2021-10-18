@@ -36,7 +36,12 @@ def find_files(suffix, path):
                 dirs.append(ele_path)
     return target_files
 
-print(find_files(".c", "./testdir")) # return ['./testdir/t1.c', './testdir/subdir5/a.c', './testdir/subdir1/a.c', './testdir/subdir3/subsubdir1/b.c']
-print(find_files('.h', './testdir')) # return ['./testdir/t1.h', './testdir/subdir5/a.h', './testdir/subdir1/a.h', './testdir/subdir3/subsubdir1/b.h']
-print(find_files('.c', '')) # return None
-print(find_files('.c', './testdir/subdir5')) # return ['./testdir/subdir5/a.c']
+# test case 1
+print(find_files(".c", "./testdir"))                # ['./testdir/t1.c', './testdir/subdir5/a.c', './testdir/subdir1/a.c', './testdir/subdir3/subsubdir1/b.c']
+print(find_files('.h', './testdir'))                # ['./testdir/t1.h', './testdir/subdir5/a.h', './testdir/subdir1/a.h', './testdir/subdir3/subsubdir1/b.h']
+print(find_files('.c', './testdir/subdir5'))        # ['./testdir/subdir5/a.c']
+# test case 2 - edge case - path is not given
+print(find_files('.c', ''))                         # None (because path is not given)
+# test case 3 - edge case - suffix is given empty string ''
+print(find_files('', "./testdir"))                  # All files under the testdir directory (because all the file ends with '')
+
