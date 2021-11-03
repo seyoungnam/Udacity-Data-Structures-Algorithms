@@ -7,19 +7,23 @@ The `Trie` class possesses the `is_word` attribute that checks if the current No
 ### Time Complexity
 
 * `TrieNode` class:
+    * `__init__()`: O(1) - set up two variables, which take the constant time.
     * `insert()`: O(1) - this function initiates a new `TrieNode` instance, creating two variables.
     * `suffixes()`: O(nm) - `n` represents the length of `wordList` and `m` refers to the length of each word. In the worst case, all words contain the input prefix and we have to visit every character of each word.
 
 * `Trie` class:
+    * `__init__()`: O(1) - set up one variable, which takes the constant time.
     * `insert()`: O(n) - `n` represents the length of the input word. To perform `insert()`, we have to visit every character of the word.
     * `find()`: O(n) - `n` represents the length of the word that contains the prefix. In the worst case, the given prefix is as long as its word, we have to visit every character.
 
 ### Space Complexity
 
 * `TrieNode` class:
+    * `__init__()`: O(1) - two new variables are assigned, and space for them is fixed when the instance is initiated.
     * `insert()`: O(1) - this function initiates a new `TrieNode` instance, taking constant spaces for the two variables.
     * `suffixes()`: O(n) - In the worst case, all words contain the input prefix and every words in the `wordList` should be stored.
 
 * `Trie` class:
+    * `__init__()`: O(1) - only one variable is assigned, and its space is fixed when the instance is initiated.
     * `insert()`: O(n) - `n` represents the length of the input word. Each character takes a space.
     * `find()`: O(1) - the functions requires a new space only for `curr` variable.

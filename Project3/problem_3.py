@@ -57,3 +57,4 @@ test_function([[], [-1, -1]])                           # Pass
 
 print("==== test case 3 - edge case ====")
 test_function([[3], [-1, -1]])                          # Pass
+test_function([[0, 0], [0, 0]])                         # Pass

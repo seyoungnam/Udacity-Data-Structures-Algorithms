@@ -28,7 +28,8 @@ test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0,
 test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])                                # Pass,  [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2]
 
 print("==== test case 2 - edge case ====")
-test_function([])                                                                                       # Pass,  []
+test_function([0])                                                                                      # Pass,  [0]
 
 print("==== test case 3 - edge case ====")
-test_function([0, 0, 0, 0, 0, 0])                                                                       # Pass,  [3, 3, 3, 3, 3, 3, 3]
+test_function([1])                                                                                      # Pass,  [1]
+test_function([0, 0, 0, 0, 0, 0])                                                                       # Pass,  [0, 0, 0, 0, 0, 0]
