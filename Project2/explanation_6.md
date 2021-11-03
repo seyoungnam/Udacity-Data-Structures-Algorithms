@@ -1,8 +1,8 @@
 ## Problem 6 : Union and Intersection
 
-### Reasoning for choosing data sturctures and/or algorithms
+### Reasoning for choosing data structures and/or algorithms
 
-For getting union and intersection of multiple sets, using bitwise operators would be the most efficient solution. After getting a set for union and inersection, I add each element in the set to a new linked list.
+For getting union and intersection of multiple sets, using bitwise operators would be the most efficient solution. After getting a set for union and intersection, I add each element in the set to a new linked list.
 
 ### Time Complexity
 
